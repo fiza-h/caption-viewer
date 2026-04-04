@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10615304",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10615304.jpg",
+  "selected_labels": {
+    "explicit": [
+      "rel_personal",
+      "religion"
+    ],
+    "moderate": "name_first"
+  },
+  "captions_untagged": {
+    "explicit": "My aunt has been diving so deep into her Buddhist practice lately, and I finally captured this quiet moment of her at the sanctuary. Her calm energy is honestly so inspiring to be around.",
+    "moderate": "Elaine always carries such a deeply grounded and peaceful energy with her. Loved the way the soft morning light caught her looking out over the courtyard.",
+    "no_leak": "Such a contemplative and peaceful expression in this shot. The way the natural light highlights the crisp layers of the dark and white fabric against the greenery is just beautifully serene."
+  },
+  "captions_tagged": {
+    "explicit": "<rel_personal>My aunt</rel_personal> has been diving so deep into her <religion>Buddhist practice</religion> lately, and I finally captured this quiet moment of her at the sanctuary. Her calm energy is honestly so inspiring to be around.",
+    "moderate": "<name_first>Elaine</name_first> always carries such a deeply grounded and peaceful energy with her. Loved the way the soft morning light caught her looking out over the courtyard.",
+    "no_leak": "Such a contemplative and peaceful expression in this shot. The way the natural light highlights the crisp layers of the dark and white fabric against the greenery is just beautifully serene."
+  }
+}

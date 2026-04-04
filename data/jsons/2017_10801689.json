@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10801689",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10801689.jpg",
+  "selected_labels": {
+    "explicit": [
+      "education_history",
+      "occassion_personal"
+    ],
+    "moderate": "rel_social"
+  },
+  "captions_untagged": {
+    "explicit": "Homecoming weekend at Mount Union is always the highlight of the year. Watching the cheer squad parade by brings back so many memories of my own graduation day.",
+    "moderate": "It's so fun catching up with the old social circle during alumni weekend. The campus is buzzing, and it’s honestly nice to see the new generation keeping the traditions alive.",
+    "no_leak": "There’s such an incredible energy on campus right now. The purple and white balloons everywhere really set the mood for a perfect afternoon of celebrations."
+  },
+  "captions_tagged": {
+    "explicit": "Homecoming weekend at <education_history>Mount Union</education_history> is always the highlight of the <occassion_personal>year</occassion_personal>. Watching the cheer squad parade by brings back so many memories of my own graduation day.",
+    "moderate": "It's so fun catching up with the old <rel_social>social circle</rel_social> during alumni weekend. The campus is buzzing, and it’s honestly nice to see the new generation keeping the traditions alive.",
+    "no_leak": "There’s such an incredible energy on campus right now. The purple and white balloons everywhere really set the mood for a perfect afternoon of celebrations."
+  }
+}

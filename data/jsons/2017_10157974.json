@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10157974",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-pro-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10157974.jpg",
+  "selected_labels": {
+    "explicit": [
+      "rel_personal",
+      "address_current_partial"
+    ],
+    "moderate": "date_time"
+  },
+  "captions_untagged": {
+    "explicit": "So proud of my daughters for volunteering their weekend to help out at the branches here in Lincoln, Nebraska. Raising readers is honestly one of my favorite parts of being a mom.",
+    "moderate": "Stumbled across this throwback to April 2012 and I can't believe how fast time actually goes. Such a fun afternoon holding up the giant sign and promoting the summer reading challenge.",
+    "no_leak": "There is nothing quite like spending a weekend afternoon surrounded by books and good energy. Proud to hold up the giant sign and support such a great local program!"
+  },
+  "captions_tagged": {
+    "explicit": "So proud of <rel_personal>my daughters</rel_personal> for volunteering their weekend to help out at the branches here in <address_current_partial>Lincoln, Nebraska</address_current_partial>. Raising readers is honestly one of my favorite parts of being a mom.",
+    "moderate": "Stumbled across this throwback to <date_time>April 2012</date_time> and I can't believe how fast time actually goes. Such a fun afternoon holding up the giant sign and promoting the summer reading challenge.",
+    "no_leak": "There is nothing quite like spending a weekend afternoon surrounded by books and good energy. Proud to hold up the giant sign and support such a great local program!"
+  }
+}

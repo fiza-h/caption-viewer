@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10312047",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-pro-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10312047.jpg",
+  "selected_labels": {
+    "explicit": [
+      "address_home_partial",
+      "rel_personal"
+    ],
+    "moderate": "date_time"
+  },
+  "captions_untagged": {
+    "explicit": "Finally got the keys to our new apartment complex right on the water. My boyfriend is already stressing about moving the furniture, but I'm just here for this view.",
+    "moderate": "Nothing beats a quiet Sunday morning walk through the brick canyons before the city wakes up. The light hitting the water is just perfect today.",
+    "no_leak": "Love the way these modern brick buildings frame the water perfectly. The sharp lines against the clear sky give it such a clean, architectural feel."
+  },
+  "captions_tagged": {
+    "explicit": "Finally got the keys to <address_home_partial>our new apartment complex</address_home_partial> right on the water. <rel_personal>My boyfriend</rel_personal> is already stressing about moving the furniture, but I'm just here for this view.",
+    "moderate": "Nothing beats a quiet <date_time>Sunday morning</date_time> walk through the brick canyons before the city wakes up. The light hitting the water is just perfect today.",
+    "no_leak": "Love the way these modern brick buildings frame the water perfectly. The sharp lines against the clear sky give it such a clean, architectural feel."
+  }
+}

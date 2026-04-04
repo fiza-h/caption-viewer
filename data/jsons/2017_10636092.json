@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10636092",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10636092.jpg",
+  "selected_labels": {
+    "explicit": [
+      "rel_personal",
+      "hobbies"
+    ],
+    "moderate": "name_first"
+  },
+  "captions_untagged": {
+    "explicit": "My sister spent months designing these articulated wings, and seeing her finally debut this full cosplay makes me so incredibly proud. The sheer amount of dedication she pours into her crafting is just amazing.",
+    "moderate": "Trying to find people in this dense vendor area is usually impossible, but spotting Chloe is easy when she is wearing giant wooden wings. She completely nailed the steampunk aesthetic this year.",
+    "no_leak": "The sheer level of creativity at these outdoor faires is always unbelievable. Spotted someone walking past the booths wearing fully articulated wooden wings and an incredibly detailed jacket."
+  },
+  "captions_tagged": {
+    "explicit": "<rel_personal>My sister</rel_personal> spent months designing these articulated wings, and seeing her finally debut this full <hobbies>cosplay</hobbies> makes me so incredibly proud. The sheer amount of dedication she pours into her crafting is just amazing.",
+    "moderate": "Trying to find people in this dense vendor area is usually impossible, but spotting <name_first>Chloe</name_first> is easy when she is wearing giant wooden wings. She completely nailed the steampunk aesthetic this year.",
+    "no_leak": "The sheer level of creativity at these outdoor faires is always unbelievable. Spotted someone walking past the booths wearing fully articulated wooden wings and an incredibly detailed jacket."
+  }
+}

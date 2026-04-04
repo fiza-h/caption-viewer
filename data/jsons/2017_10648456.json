@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10648456",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10648456.jpg",
+  "selected_labels": {
+    "explicit": [
+      "occupation",
+      "rel_professional"
+    ],
+    "moderate": "hobbies"
+  },
+  "captions_untagged": {
+    "explicit": "Performing as a lead singer in this band has been my main professional focus for years, and nights like this remind me exactly why I do it. Working with these musicians is such a rewarding career move.",
+    "moderate": "Between our actual day jobs, the band is mostly just one of those serious hobbies we refuse to let go of. Even when the setlist gets exhausting, I wouldn't trade these weekend gigs for anything.",
+    "no_leak": "There is nothing quite like the energy of a live set once the room is finally packed. Grateful for every second spent on stage tonight, even with the technical chaos behind the scenes."
+  },
+  "captions_tagged": {
+    "explicit": "Performing as a <occupation>lead singer</occupation> in this band has been my main professional focus for years, and nights like this remind me exactly why I do it. Working with these <rel_professional>musicians</rel_professional> is such a rewarding career move.",
+    "moderate": "Between our actual day jobs, the band is mostly just one of those serious <hobbies>hobbies</hobbies> we refuse to let go of. Even when the setlist gets exhausting, I wouldn't trade these weekend gigs for anything.",
+    "no_leak": "There is nothing quite like the energy of a live set once the room is finally packed. Grateful for every second spent on stage tonight, even with the technical chaos behind the scenes."
+  }
+}

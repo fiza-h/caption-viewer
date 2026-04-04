@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10746527",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10746527.jpg",
+  "selected_labels": {
+    "explicit": [
+      "occassion_personal",
+      "culture"
+    ],
+    "moderate": "rel_social"
+  },
+  "captions_untagged": {
+    "explicit": "Finally won the cooking competition at Aste Nagusia! Celebrating our Basque culinary traditions with the whole family today felt like such a massive milestone for us all.",
+    "moderate": "It’s so rare that we get our entire social circle together for a celebration like this, but seeing everyone show up for the prize ceremony was honestly heartwarming.",
+    "no_leak": "The energy at the plaza today was absolutely incredible. Everyone was smiling, the prizes were being handed out, and the whole atmosphere was just pure celebration."
+  },
+  "captions_tagged": {
+    "explicit": "Finally won the cooking competition at Aste Nagusia! Celebrating our <culture>Basque culinary traditions</culture> with the whole family today felt like such a massive <occassion_personal>milestone</occassion_personal> for us all.",
+    "moderate": "It’s so rare that we get our entire <rel_social>social circle</rel_social> together for a celebration like this, but seeing everyone show up for the prize ceremony was honestly heartwarming.",
+    "no_leak": "The energy at the plaza today was absolutely incredible. Everyone was smiling, the prizes were being handed out, and the whole atmosphere was just pure celebration."
+  }
+}

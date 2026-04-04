@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caption Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Caption Viewer</h1>
+      <div id="counter">Loading…</div>
+    </header>
+
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Loading data…</p>
+    </div>
+
+    <div id="empty-state" class="hidden">
+      <p>No data found. Place your <code>.json</code> files in <code>data/jsons/</code> and images in <code>data/images/</code>, then refresh.</p>
+    </div>
+
+    <main id="viewer" class="hidden">
+      <!-- Navigation arrows -->
+      <button id="btn-prev" class="nav-btn nav-prev" title="Previous (← arrow key)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button id="btn-next" class="nav-btn nav-next" title="Next (→ arrow key)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <div id="content">
+        <div class="image-panel">
+          <div id="image-container">
+            <img id="main-image" src="" alt="No image" />
+            <div id="no-image-placeholder" class="hidden">
+              <p>No image found</p>
+            </div>
+          </div>
+          <div id="image-meta">
+            <span id="image-id"></span>
+            <span id="model-info"></span>
+          </div>
+        </div>
+
+        <div class="captions-panel">
+          <!-- Labels -->
+          <div id="labels-section" class="caption-card labels-card">
+            <h3>Selected Labels</h3>
+            <div id="labels-content"></div>
+          </div>
+
+          <!-- Explicit -->
+          <div class="caption-card explicit-card">
+            <div class="card-header">
+              <h3>Explicit</h3>
+              <span class="badge badge-explicit">high risk</span>
+            </div>
+            <p id="caption-explicit" class="caption-text"></p>
+          </div>
+
+          <!-- Moderate -->
+          <div class="caption-card moderate-card">
+            <div class="card-header">
+              <h3>Moderate</h3>
+              <span class="badge badge-moderate">medium risk</span>
+            </div>
+            <p id="caption-moderate" class="caption-text"></p>
+          </div>
+
+          <!-- No Leak -->
+          <div class="caption-card noleak-card">
+            <div class="card-header">
+              <h3>No Leak</h3>
+              <span class="badge badge-noleak">safe</span>
+            </div>
+            <p id="caption-noleak" class="caption-text"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

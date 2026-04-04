@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10693210",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10693210.jpg",
+  "selected_labels": {
+    "explicit": [
+      "disability_physical",
+      "hobbies"
+    ],
+    "moderate": "landmark"
+  },
+  "captions_untagged": {
+    "explicit": "Finally found a park with fully accessible paths so I can actually join the group for our weekend photography hobby. It's such a relief not having to worry about terrain when I'm just trying to get the perfect shot.",
+    "moderate": "Exploring this local landmark has been on my list for ages, and the serpentine ramp layout is honestly as visually cool as it is functional.",
+    "no_leak": "The way these railings curve through the terraced grass is so hypnotic. Such a perfectly manicured landscape, it almost looks like an architectural model come to life."
+  },
+  "captions_tagged": {
+    "explicit": "Finally found a park with <disability_physical>fully accessible paths</disability_physical> so I can actually join the group for our weekend <hobbies>photography</hobbies> hobby. It's such a relief not having to worry about terrain when I'm just trying to get the perfect shot.",
+    "moderate": "Exploring this local <landmark>landmark</landmark> has been on my list for ages, and the serpentine ramp layout is honestly as visually cool as it is functional.",
+    "no_leak": "The way these railings curve through the terraced grass is so hypnotic. Such a perfectly manicured landscape, it almost looks like an architectural model come to life."
+  }
+}

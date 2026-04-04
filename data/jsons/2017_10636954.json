@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10636954",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10636954.jpg",
+  "selected_labels": {
+    "explicit": [
+      "occupation",
+      "face_partial"
+    ],
+    "moderate": "rel_personal"
+  },
+  "captions_untagged": {
+    "explicit": "Updating the headshots for my acting portfolio, and I ended up really liking this dramatic half-face crop. The heavy shadows might be a bit too intense for commercial gigs, but I love the moody black-and-white vibe.",
+    "moderate": "My husband finally let me test out some new lighting setups on him in the backyard. He naturally defaults to this incredibly dramatic, brooding stare the second the camera points his way.",
+    "no_leak": "There is something so compelling about extreme black and white contrast. Letting the shadows completely swallow half the frame just adds such an intense, cinematic mood to the portrait."
+  },
+  "captions_tagged": {
+    "explicit": "Updating the headshots for my <occupation>acting</occupation> portfolio, and I ended up really liking this dramatic <face_partial>half-face crop</face_partial>. The heavy shadows might be a bit too intense for commercial gigs, but I love the moody black-and-white vibe.",
+    "moderate": "<rel_personal>My husband</rel_personal> finally let me test out some new lighting setups on him in the backyard. He naturally defaults to this incredibly dramatic, brooding stare the second the camera points his way.",
+    "no_leak": "There is something so compelling about extreme black and white contrast. Letting the shadows completely swallow half the frame just adds such an intense, cinematic mood to the portrait."
+  }
+}

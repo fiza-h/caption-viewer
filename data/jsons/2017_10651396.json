@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10651396",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10651396.jpg",
+  "selected_labels": {
+    "explicit": [
+      "vehicle_ownership",
+      "culture"
+    ],
+    "moderate": "date_time"
+  },
+  "captions_untagged": {
+    "explicit": "Finally finished restoring my bike, and it feels like I’ve brought a literal piece of my family’s history back to life. There is just something about these classic red frames that captures the spirit of home perfectly.",
+    "moderate": "Spent the better part of this rainy Tuesday afternoon tinkering in the garage, and I’m finally starting to see progress on the engine. Nothing beats the quiet satisfaction of making an old machine run smooth again.",
+    "no_leak": "The shine on this vintage frame is just incredible. Such a clean, classic design that somehow never goes out of style."
+  },
+  "captions_tagged": {
+    "explicit": "Finally finished restoring <vehicle_ownership>my bike</vehicle_ownership>, and it feels like I’ve brought a literal piece of my family’s <culture>history</culture> back to life. There is just something about these classic red frames that captures the spirit of home perfectly.",
+    "moderate": "Spent the better part of this <date_time>rainy Tuesday afternoon</date_time> tinkering in the garage, and I’m finally starting to see progress on the engine. Nothing beats the quiet satisfaction of making an old machine run smooth again.",
+    "no_leak": "The shine on this vintage frame is just incredible. Such a clean, classic design that somehow never goes out of style."
+  }
+}

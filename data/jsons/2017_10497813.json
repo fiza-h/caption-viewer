@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10497813",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10497813.jpg",
+  "selected_labels": {
+    "explicit": [
+      "vehicle_ownership",
+      "name_first"
+    ],
+    "moderate": "rel_social"
+  },
+  "captions_untagged": {
+    "explicit": "Finally took my car out for a proper drive and ended up running into Jason by the patio tables. An unplanned hangout in the sun is always the best kind.",
+    "moderate": "Always a good time wasting the afternoon and catching up with the local car crowd when the weather gets this nice.",
+    "no_leak": "Such a beautiful classic. The way that pale blue paint catches the afternoon light is just perfect."
+  },
+  "captions_tagged": {
+    "explicit": "Finally took <vehicle_ownership>my car</vehicle_ownership> out for a proper drive and ended up running into <name_first>Jason</name_first> by the patio tables. An unplanned hangout in the sun is always the best kind.",
+    "moderate": "Always a good time wasting the afternoon and catching up with <rel_social>the local car crowd</rel_social> when the weather gets this nice.",
+    "no_leak": "Such a beautiful classic. The way that pale blue paint catches the afternoon light is just perfect."
+  }
+}

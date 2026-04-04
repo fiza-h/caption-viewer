@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10499238",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10499238.jpg",
+  "selected_labels": {
+    "explicit": [
+      "name_full",
+      "occupation"
+    ],
+    "moderate": "occassion_work"
+  },
+  "captions_untagged": {
+    "explicit": "Kevin Cullinane breaking down the latest fuel-sales data for us this afternoon. Always a privilege to watch our lead researcher explain the top-down methodology in person.",
+    "moderate": "Day two of our industry conference and the afternoon sessions are diving deep into the new activity-based estimates. Trying to absorb as much as possible before the coffee completely wears off.",
+    "no_leak": "Fascinating breakdown of how top-down data compares to standard activity estimates. The Q&A segment for this presentation is definitely going to be interesting."
+  },
+  "captions_tagged": {
+    "explicit": "<name_full>Kevin Cullinane</name_full> breaking down the latest fuel-sales data for us this afternoon. Always a privilege to watch our <occupation>lead researcher</occupation> explain the top-down methodology in person.",
+    "moderate": "Day two of our <occassion_work>industry conference</occassion_work> and the afternoon sessions are diving deep into the new activity-based estimates. Trying to absorb as much as possible before the coffee completely wears off.",
+    "no_leak": "Fascinating breakdown of how top-down data compares to standard activity estimates. The Q&A segment for this presentation is definitely going to be interesting."
+  }
+}

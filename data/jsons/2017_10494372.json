@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10494372",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-pro-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10494372.jpg",
+  "selected_labels": {
+    "explicit": [
+      "address_current_partial",
+      "occupation"
+    ],
+    "moderate": "occassion_work"
+  },
+  "captions_untagged": {
+    "explicit": "Another long day at the Denver yard keeping these Nordco beasts running. Being a heavy machinery mechanic means you never really go home with clean hands, but I wouldn't trade it.",
+    "moderate": "Wrapping up a long track maintenance shift before the weather turns. These massive yellow machines take a ton of upkeep, but getting them ready to roll is always satisfying.",
+    "no_leak": "Massive piece of railway equipment sitting idle on the tracks. The bright yellow paint really stands out against the gray industrial background and the highway overpass."
+  },
+  "captions_tagged": {
+    "explicit": "Another long day at <address_current_partial>the Denver yard</address_current_partial> keeping these Nordco beasts running. Being a <occupation>heavy machinery mechanic</occupation> means you never really go home with clean hands, but I wouldn't trade it.",
+    "moderate": "Wrapping up a long <occassion_work>track maintenance shift</occassion_work> before the weather turns. These massive yellow machines take a ton of upkeep, but getting them ready to roll is always satisfying.",
+    "no_leak": "Massive piece of railway equipment sitting idle on the tracks. The bright yellow paint really stands out against the gray industrial background and the highway overpass."
+  }
+}

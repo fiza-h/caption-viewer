@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10066656",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-pro-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10066656.jpg",
+  "selected_labels": {
+    "explicit": [
+      "opinion_political",
+      "nationality"
+    ],
+    "moderate": "landmark"
+  },
+  "captions_untagged": {
+    "explicit": "Standing shoulder to shoulder in this crowd, demanding the change we actually deserve. I've never felt more deeply connected to my Egyptian roots than in this exact moment.",
+    "moderate": "The sheer scale of the crowd gathered outside the Semiramis InterContinental today is something I'll never forget. You can literally feel the weight of the moment in the air.",
+    "no_leak": "A sea of people and waving flags as far as the eye can see against the hazy sky. The sheer volume and energy in the streets today are absolutely overwhelming."
+  },
+  "captions_tagged": {
+    "explicit": "Standing shoulder to shoulder in this crowd, <opinion_political>demanding the change we actually deserve</opinion_political>. I've never felt more deeply connected to my <nationality>Egyptian</nationality> roots than in this exact moment.",
+    "moderate": "The sheer scale of the crowd gathered outside <landmark>the Semiramis InterContinental</landmark> today is something I'll never forget. You can literally feel the weight of the moment in the air.",
+    "no_leak": "A sea of people and waving flags as far as the eye can see against the hazy sky. The sheer volume and energy in the streets today are absolutely overwhelming."
+  }
+}

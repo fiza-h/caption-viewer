@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10642380",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10642380.jpg",
+  "selected_labels": {
+    "explicit": [
+      "education_history",
+      "occassion_work"
+    ],
+    "moderate": "rel_professional"
+  },
+  "captions_untagged": {
+    "explicit": "Back at the university lab for another intense day of our international science competition. Representing our school on this global stage is definitely the most challenging academic experience I've had so far.",
+    "moderate": "The whole team is feeling the pressure as we head into the final round of the conference. It’s been great collaborating with these colleagues, but I’m ready for this week to be over.",
+    "no_leak": "Group study sessions always turn into intense deep-dives when there's a deadline looming. We’ve been focused on this project for hours and the room is absolutely buzzing with concentration."
+  },
+  "captions_tagged": {
+    "explicit": "Back at the <education_history>university lab</education_history> for another intense day of our international science competition. Representing our school on this global stage is definitely the most challenging academic experience I've had so far.",
+    "moderate": "The whole team is feeling the pressure as we head into the final round of the <occassion_work>conference</occassion_work>. It’s been great collaborating with these colleagues, but I’m ready for this week to be over.",
+    "no_leak": "Group study sessions always turn into intense deep-dives when there's a deadline looming. We’ve been focused on this project for hours and the room is absolutely buzzing with concentration."
+  }
+}

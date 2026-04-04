@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10457474",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-pro-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10457474.jpg",
+  "selected_labels": {
+    "explicit": [
+      "education_history",
+      "rel_personal"
+    ],
+    "moderate": "date_time"
+  },
+  "captions_untagged": {
+    "explicit": "Taking a quick break from collecting water samples for my geology master's to just stare at this crazy iron-rich stream. My fiancé is already a mile up the trail, but I couldn't walk past these colors.",
+    "moderate": "There is something so quiet and strange about these late autumn mornings out in the hills. The bright orange iron deposits in the water look almost painted on against the dry grass.",
+    "no_leak": "The way the clear water flows over that bright orange bed is completely mesmerizing. Such a stark contrast against the pale grass and dark gravel."
+  },
+  "captions_tagged": {
+    "explicit": "Taking a quick break from collecting water samples for <education_history>my geology master's</education_history> to just stare at this crazy iron-rich stream. <rel_personal>My fiancé</rel_personal> is already a mile up the trail, but I couldn't walk past these colors.",
+    "moderate": "There is something so quiet and strange about these <date_time>late autumn mornings</date_time> out in the hills. The bright orange iron deposits in the water look almost painted on against the dry grass.",
+    "no_leak": "The way the clear water flows over that bright orange bed is completely mesmerizing. Such a stark contrast against the pale grass and dark gravel."
+  }
+}

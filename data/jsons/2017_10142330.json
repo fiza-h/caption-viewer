@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10142330",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-pro-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10142330.jpg",
+  "selected_labels": {
+    "explicit": [
+      "occupation",
+      "rel_professional"
+    ],
+    "moderate": "occassion_work"
+  },
+  "captions_untagged": {
+    "explicit": "Being a trauma surgeon means making split-second decisions when absolutely everything is on the line. I couldn’t ask for better coworkers to stand beside me during these intense, high-stakes cases.",
+    "moderate": "The level of focus required under the bright lights of the operating room is absolutely unmatched. Just another intense shift doing what needs to be done.",
+    "no_leak": "The sheer concentration in the room during a complex procedure is palpable. Every single movement is precise and deliberate under the glare of the lights."
+  },
+  "captions_tagged": {
+    "explicit": "Being a <occupation>trauma surgeon</occupation> means making split-second decisions when absolutely everything is on the line. I couldn’t ask for better <rel_professional>coworkers</rel_professional> to stand beside me during these intense, high-stakes cases.",
+    "moderate": "The level of focus required under the bright lights of the operating room is absolutely unmatched. Just another intense <occassion_work>shift</occassion_work> doing what needs to be done.",
+    "no_leak": "The sheer concentration in the room during a complex procedure is palpable. Every single movement is precise and deliberate under the glare of the lights."
+  }
+}

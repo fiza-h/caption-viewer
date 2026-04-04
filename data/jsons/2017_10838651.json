@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10838651",
+  "model_stage1": "gemini-3.1-flash-lite-preview",
+  "model_stage2": "gemini-3.1-flash-lite-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10838651.jpg",
+  "selected_labels": {
+    "explicit": [
+      "rel_social",
+      "hobbies"
+    ],
+    "moderate": "date_time"
+  },
+  "captions_untagged": {
+    "explicit": "Finally taking a break from our long hike to crush some pizza with the best trail buddies. Our group hiking hobby definitely requires these kind of high-calorie rewards.",
+    "moderate": "It's been so long since we managed to get everyone together on a Saturday afternoon for a proper outdoor lunch.",
+    "no_leak": "Nothing beats a makeshift bench in the shade and some quick food after spending the whole morning on the trails."
+  },
+  "captions_tagged": {
+    "explicit": "Finally taking a break from our long hike to crush some pizza with the best <rel_social>trail buddies</rel_social>. Our group <hobbies>hiking</hobbies> hobby definitely requires these kind of high-calorie rewards.",
+    "moderate": "It's been so long since we managed to get everyone together on a <date_time>Saturday afternoon</date_time> for a proper outdoor lunch.",
+    "no_leak": "Nothing beats a makeshift bench in the shade and some quick food after spending the whole morning on the trails."
+  }
+}

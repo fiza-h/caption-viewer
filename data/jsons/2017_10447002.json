@@ -1,0 +1,23 @@
+{
+  "image_id": "2017_10447002",
+  "model_stage1": "gemini-3.1-pro-preview",
+  "model_stage2": "gemini-3.1-pro-preview",
+  "image_path": "C:\\Users\\hibah\\Desktop\\Fiza\\benchmarking images\\vispr_500_fiza\\jpg\\2017_10447002.jpg",
+  "selected_labels": {
+    "explicit": [
+      "education_history",
+      "sports"
+    ],
+    "moderate": "rel_social"
+  },
+  "captions_untagged": {
+    "explicit": "Back repping Lehigh for the alumni lacrosse tournament. Always good catching up with the old crew between games, even if the legs don't move quite like they used to.",
+    "moderate": "Nothing beats running into old buddies at these weekend tournaments. The stories get more exaggerated every single year we come out here.",
+    "no_leak": "Perfect weather for an outdoor weekend event. Lots of catching up, good energy, and just enjoying the sunshine."
+  },
+  "captions_tagged": {
+    "explicit": "Back repping <education_history>Lehigh</education_history> for the alumni <sports>lacrosse tournament</sports>. Always good catching up with the old crew between games, even if the legs don't move quite like they used to.",
+    "moderate": "Nothing beats running into <rel_social>old buddies</rel_social> at these weekend tournaments. The stories get more exaggerated every single year we come out here.",
+    "no_leak": "Perfect weather for an outdoor weekend event. Lots of catching up, good energy, and just enjoying the sunshine."
+  }
+}
