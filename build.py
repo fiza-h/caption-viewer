@@ -2,17 +2,17 @@
 Build script: reads individual JSON files and generates a single data.json
 for static deployment.
 
+Configure your JSON and image folder paths in config.py
+
 Run:  python build.py
 """
 
 import json
-import os
 from pathlib import Path
 
+from config import JSONS_DIR, IMAGES_DIR
+
 BASE_DIR = Path(__file__).parent
-DATA_DIR = BASE_DIR / "data"
-JSONS_DIR = DATA_DIR / "jsons"
-IMAGES_DIR = DATA_DIR / "images"
 OUTPUT = BASE_DIR / "data.json"
 
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp")

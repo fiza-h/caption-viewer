@@ -1,38 +1,40 @@
-const fs = require("fs");
-const path = require("path");
+/**
+ * Vercel Serverless Function: /api/data
+ *
+ * Fetches caption JSON files and image metadata from Google Drive.
+ * Returns merged data identical to the old static data.json format,
+ * but with Google Drive image URLs instead of local paths.
+ *
+ * Required environment variables:
+ *   GOOGLE_SERVICE_ACCOUNT_KEY  – base64-encoded JSON key
+ *   DRIVE_JSONS_FOLDER_ID      – Google Drive folder ID for caption JSONs
+ *   DRIVE_IMAGES_FOLDER_ID     – Google Drive folder ID for images
+ */
+
 const { google } = require("googleapis");
 
-// Load .env fallback for local build tests
-const envPath = path.join(__dirname, ".env");
-if (fs.existsSync(envPath)) {
-  const envConfig = fs.readFileSync(envPath, "utf-8").split("\n");
-  for (let line of envConfig) {
-    line = line.trim();
-    if (line && !line.startsWith("#") && line.includes("=")) {
-      const [key, ...vals] = line.split("=");
-      if (!process.env[key.trim()]) {
-        process.env[key.trim()] = vals.join("=").trim();
-      }
-    }
-  }
-}
-
+// ── Auth ────────────────────────────────────────────
 function getAuth() {
   const raw = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
-  if (!raw) throw new Error("GOOGLE_SERVICE_ACCOUNT_KEY is not set in environment or .env");
+  if (!raw) throw new Error("GOOGLE_SERVICE_ACCOUNT_KEY env var is not set");
 
   const credentials = JSON.parse(Buffer.from(raw, "base64").toString("utf-8"));
+
   return new google.auth.GoogleAuth({
     credentials,
-    scopes: ["https://www.googleapis.com/auth/drive.readonly"]
+    scopes: ["https://www.googleapis.com/auth/drive.readonly"],
   });
 }
 
+// ── Drive helpers ───────────────────────────────────
 async function listFiles(drive, folderId, mimeFilter) {
   const allFiles = [];
   let pageToken = null;
+
   do {
-    const q = `'${folderId}' in parents and trashed = false${mimeFilter ? ` and ${mimeFilter}` : ""}`;
+    const q = `'${folderId}' in parents and trashed = false${
+      mimeFilter ? ` and ${mimeFilter}` : ""
+    }`;
     const res = await drive.files.list({
       q,
       fields: "nextPageToken, files(id, name, mimeType)",
@@ -43,46 +45,56 @@ async function listFiles(drive, folderId, mimeFilter) {
     allFiles.push(...(res.data.files || []));
     pageToken = res.data.nextPageToken;
   } while (pageToken);
+
   return allFiles;
 }
 
 async function downloadJson(drive, fileId) {
-  const res = await drive.files.get({ fileId, alt: "media" }, { responseType: "json" });
+  const res = await drive.files.get(
+    { fileId, alt: "media" },
+    { responseType: "json" }
+  );
   return res.data;
 }
 
-async function build() {
-  console.log("Starting Build Phase: Fetching data from Google Drive...");
+// ── Main handler ────────────────────────────────────
+module.exports = async function handler(req, res) {
+  // Only allow GET
+  if (req.method !== "GET") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
   try {
     const jsonsFolderId = process.env.DRIVE_JSONS_FOLDER_ID;
     const imagesFolderId = process.env.DRIVE_IMAGES_FOLDER_ID;
 
     if (!jsonsFolderId || !imagesFolderId) {
-      throw new Error("DRIVE_JSONS_FOLDER_ID and DRIVE_IMAGES_FOLDER_ID must be set");
+      return res.status(500).json({
+        error: "DRIVE_JSONS_FOLDER_ID and DRIVE_IMAGES_FOLDER_ID must be set",
+      });
     }
 
     const auth = getAuth();
     const drive = google.drive({ version: "v3", auth });
 
-    console.log("Listing files in Drive...");
+    // Fetch JSON file list and image file list in parallel
     const [jsonFiles, imageFiles] = await Promise.all([
       listFiles(drive, jsonsFolderId, "mimeType = 'application/json'"),
       listFiles(drive, imagesFolderId, "mimeType contains 'image/'"),
     ]);
 
-    console.log(`Found ${jsonFiles.length} JSONs and ${imageFiles.length} images.`);
-
+    // Build a lookup: stem → { id, name } for images
     const imageMap = new Map();
     for (const img of imageFiles) {
       const stem = img.name.replace(/\.[^.]+$/, "");
       imageMap.set(stem, { id: img.id, name: img.name });
     }
 
+    // Download all JSONs in parallel (batches of 10 to avoid rate limits)
     const items = [];
     const batchSize = 10;
 
     for (let i = 0; i < jsonFiles.length; i += batchSize) {
-      console.log(`Downloading JSONs ${i + 1} to ${Math.min(i + batchSize, jsonFiles.length)}...`);
       const batch = jsonFiles.slice(i, i + batchSize);
       const results = await Promise.all(
         batch.map(async (jf) => {
@@ -95,15 +107,12 @@ async function build() {
             return {
               image_id: imageId,
               image_file: img ? img.name : null,
-              image_path: data.image_path || "",
               image_drive_id: img ? img.id : null,
               selected_labels: data.selected_labels || {},
               captions: data.captions_tagged || data.captions || {},
               captions_untagged: data.captions_untagged || {},
               model_stage1: data.model_stage1 || "",
               model_stage2: data.model_stage2 || "",
-              raw_model_output_stage1: data.raw_model_output_stage1 || "",
-              raw_model_output_stage2: data.raw_model_output_stage2 || ""
             };
           } catch (err) {
             console.error(`Error reading ${jf.name}:`, err.message);
@@ -114,13 +123,15 @@ async function build() {
       items.push(...results.filter(Boolean));
     }
 
-    const OUTPUT = path.join(__dirname, "data.json");
-    fs.writeFileSync(OUTPUT, JSON.stringify(items, null, 2));
-    console.log(`✅ Build successful! data.json created with ${items.length} items.`);
-  } catch (e) {
-    console.error("Build failed:", e.message);
-    process.exit(1);
+    // Cache for 5 minutes, stale-while-revalidate for 10 minutes
+    res.setHeader(
+      "Cache-Control",
+      "s-maxage=300, stale-while-revalidate=600"
+    );
+    res.setHeader("Content-Type", "application/json");
+    return res.status(200).json(items);
+  } catch (err) {
+    console.error("API error:", err);
+    return res.status(500).json({ error: err.message });
   }
-}
-
-build();
+};

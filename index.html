@@ -4,14 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Caption Viewer</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div id="app">
     <header>
       <h1>Caption Viewer</h1>
-      <div id="counter">Loading…</div>
+      <div id="header-controls">
+        <input type="text" id="search-input" placeholder="Search captions, tags, IDs..." />
+        <div class="toggle-container">
+          <label class="switch">
+            <input type="checkbox" id="untagged-toggle">
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-label">Untagged</span>
+        </div>
+        <div id="counter">Loading…</div>
+      </div>
     </header>
 
     <div id="loading">
@@ -20,7 +30,7 @@
     </div>
 
     <div id="empty-state" class="hidden">
-      <p>No data found. Place your <code>.json</code> files in <code>data/jsons/</code> and images in <code>data/images/</code>, then refresh.</p>
+      <p>No data found. Make sure your Google Drive folders are configured and shared with the service account. Check your <code>DRIVE_JSONS_FOLDER_ID</code> and <code>DRIVE_IMAGES_FOLDER_ID</code> environment variables.</p>
     </div>
 
     <main id="viewer" class="hidden">
@@ -35,14 +45,20 @@
       <div id="content">
         <div class="image-panel">
           <div id="image-container">
+            <div id="action-badge" class="action-badge hidden"></div>
             <img id="main-image" src="" alt="No image" />
             <div id="no-image-placeholder" class="hidden">
               <p>No image found</p>
             </div>
           </div>
+          <div class="actions-panel">
+            <button id="btn-accept" class="action-btn btn-accept">✓ Accept</button>
+            <button id="btn-reject" class="action-btn btn-reject">✗ Reject</button>
+          </div>
           <div id="image-meta">
-            <span id="image-id"></span>
-            <span id="model-info"></span>
+            <div class="meta-row"><span class="meta-label">ID:</span> <span id="image-id"></span></div>
+            <div class="meta-row"><span class="meta-label">Model:</span> <span id="model-info"></span></div>
+            <div class="meta-row"><span class="meta-label">Path:</span> <span id="image-path" class="path-text"></span></div>
           </div>
         </div>
 
@@ -79,11 +95,26 @@
             </div>
             <p id="caption-noleak" class="caption-text"></p>
           </div>
+
+          <!-- Raw Model Data -->
+          <div class="raw-data-section">
+            <button id="btn-toggle-raw" class="raw-toggle-btn">View Raw Model Output ▼</button>
+            <div id="raw-data-container" class="hidden">
+              <div class="raw-block">
+                <h4>Stage 1 Output</h4>
+                <pre><code id="raw-stage1"></code></pre>
+              </div>
+              <div class="raw-block">
+                <h4>Stage 2 Output</h4>
+                <pre><code id="raw-stage2"></code></pre>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
